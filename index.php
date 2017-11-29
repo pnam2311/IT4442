@@ -63,20 +63,9 @@
     <script src="lib/bootstrap.min.js"></script>
   </head>
   <body>
-    <br />
+    <br/>
 
-    <?php
-    if(isset($_SESSION['user'])){
-      echo '<h2>Xin chào ' . $_SESSION['user']['full_name'] . '</h2>';
-
-      if(!isset($_SESSION['user']['full_name']) ||
-         !isset($_SESSION['user']['sex']) ||
-         !isset($_SESSION['user']['email']) ||
-         !isset($_SESSION['user']['address']) ||
-         !isset($_SESSION['user']['phone_number']))
-        echo '<h3>Bạn chưa update profile, làm ơn hãy update để chúng tôi có thể phục vụ bạn tốt nhất !!!</h3>';
-    } ?>
-
+   
     <div align='center'>
 
       <a href="cart_controller.php"><input type="submit" name="go_to_cart" style="margin-top:5px;height: 30px;font-size: 16px;" class="btn btn-success" value="My cart" /></a>
@@ -86,6 +75,20 @@
       <form action="search.php" method="GET">
         <input type="text" name="query" style="margin-top:5px;height: 30px;font-size: 16px;"/>
         <input type="submit" name="search_products" style="margin-top:5px;height: 30px;font-size: 16px;" class="btn btn-success" value="Search" />
+    
+    <div class="alert alert-info">
+         <?php
+             if(isset($_SESSION['user'])){
+                echo '<h2>Xin chào ' . $_SESSION['user']['full_name'] . '</h2>';
+
+             if(!isset($_SESSION['user']['full_name']) ||
+                  !isset($_SESSION['user']['sex']) ||
+                  !isset($_SESSION['user']['email']) ||
+                  !isset($_SESSION['user']['address']) ||
+                  !isset($_SESSION['user']['phone_number']))
+          echo '<h3>Bạn chưa update profile, làm ơn hãy update để chúng tôi có thể phục vụ bạn tốt nhất !!!</h3>';
+    } ?>
+    </div>
       </form>
 
     </div>

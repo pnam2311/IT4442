@@ -19,36 +19,32 @@
 <html>
   <head>
   	<title>Login</title>
+  	<link rel="stylesheet" href="lib/bootstrap.min.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
   </head>
 
   <body>
+
+    <div class="container" align='center'">
     <h1 align="center" style="margin-top: 100px">Login</h1>
-    <div class="container" align='center'>
-      <form action="" method="post">
-        <table>
-          <tr>
-            <td>
-              <label for="username">Username: </label>
-            </td>
-          	<td>
-              <input type="text" name="username" id="usr" placeholder="Enter your username">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="password">Password: </label>
-            </td>
-            <td>
-              <input type="password" name="password" id="psw" placeholder="Enter your password">
-            </td>
-          </tr>
-        	<tr>
-        	  <td colspan="2" align="center">
-        	    <button type="submit" style="margin-top:5px;height: 30px;font-size: 16px;" class="button">Login</button>
-        	  </td>
-        	</tr>
-        </table>
-      </form>
+		<br>
+        <form class="form-horizontal" method="post" action="">
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="user">Tên đăng nhập:</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="username" id="usr" placeholder="Tên đăng nhập" required><br/>
+                </div>
+                <label class="control-label col-sm-4" for="pass">Password:</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" name="password" id="usr" placeholder="Tên đăng nhập" required><br/>
+                </div>
+                <div class="col-sm-offset-2 col-sm-8">
+            		<input type="submit" class="btn btn-primary" value="Đăng nhập"><br><br> 
+           		</div>
+            </div>
+        </form>
+   
     </div>
   </body>
 </html>
